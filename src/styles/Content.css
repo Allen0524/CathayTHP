@@ -10,6 +10,22 @@
   background-color: whitesmoke;
 }
 
+@media screen and (mid-width: 426px) {
+  .content__lists {
+    width: 400px;
+  }
+}
+@media screen and (mid-width: 376px) {
+  .content__lists {
+    width: 380px;
+  }
+}
+@media screen and (max-width: 375px) {
+  .content__lists {
+    width: 300px;
+  }
+}
+
 /* 無訂單的樣式 */
 .content__lists h4 {
   padding: 10px 0px 10px 20px;
