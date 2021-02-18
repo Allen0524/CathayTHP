@@ -2,6 +2,10 @@
 
 A simple frontend Order status webapp build with React.js, Hooks, Redux Toolkit, CSS, JS.
 
+### `Demo`
+
+![image](https://github.com/Allen0524/CathayTHP/blob/main/cathayDemo.gif)
+
 ## Installation
 
 A simple api server using json-server package. You have to install it in global enviroment.
