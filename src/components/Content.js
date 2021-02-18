@@ -7,16 +7,20 @@ import axios from "axios";
 import { prolist, comlist } from "../redux/reducer";
 
 function Content() {
+  // list開關
   const [progressShow, setProShow] = useState(true);
   const [completedShow, setComShow] = useState(true);
+
   const dispatch = useDispatch();
   // 進行中的list
   const proList = useSelector(prolist);
   // 完成的list
   const comList = useSelector(comlist);
 
-  const handleShow = (show, a) => {
-    a === 1 ? setProShow(!show) : setComShow(!show);
+  // 額外功能：點選進行中或已完成可以收合list
+  // code === ing -> 進行中
+  const handleShow = (show, code) => {
+    code === "ing" ? setProShow(!show) : setComShow(!show);
   };
 
   // get data
@@ -25,7 +29,6 @@ function Content() {
       const data = await axios
         .get("http://localhost:3020/orders")
         .then((res) => {
-          // console.log(res.data);
           return res.data;
         })
         .catch((err) => {
@@ -42,17 +45,19 @@ function Content() {
       {/* 訂單區塊 */}
       <div className="content__lists">
         {/* 進行中 */}
-        {/* 進行中 status===1|| status===2 */}
-        <h3 onClick={() => handleShow(progressShow, 1)}>進行中</h3>
-        {progressShow && proList.length !== 0 ? (
+        <h3 onClick={() => handleShow(progressShow, "ing")}>進行中</h3>
+        {progressShow ? (
           <OrderList data={proList} state={true} />
+        ) : proList.length === 0 ? (
+          <h4>目前無訂單呦～</h4>
         ) : null}
 
         {/* 已完成 */}
-        {/* 已完成 status===3|| status===4 */}
-        <h3 onClick={() => handleShow(completedShow, 2)}>已完成</h3>
-        {completedShow && comList.length !== 0 ? (
+        <h3 onClick={() => handleShow(completedShow, "com")}>已完成</h3>
+        {completedShow ? (
           <OrderList data={comList} state={false} />
+        ) : comList.length === 0 ? (
+          <h4>目前無訂單呦～</h4>
         ) : null}
       </div>
     </div>

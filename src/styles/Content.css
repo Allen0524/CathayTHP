@@ -10,6 +10,16 @@
   background-color: whitesmoke;
 }
 
+/* 無訂單的樣式 */
+.content__lists h4 {
+  padding: 10px 0px 10px 20px;
+  margin: 0;
+  background-color: #fff;
+  color: gray;
+  border: 1px solid #e6e6e6;
+  border-top: none;
+}
+
 .content__lists h3 {
   border-bottom: 1px solid #e6e6e6;
   height: 26px;
