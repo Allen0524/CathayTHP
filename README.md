@@ -6,7 +6,7 @@ A simple frontend Order status webapp build with React.js, Hooks, Redux Toolkit,
 
 A simple api server using json-server package. You have to install it in global enviroment.
 
-The mock data is located at src/APIserver/db.json and you can manually add any data that matchs the json format.
+The mock data is located at src/APIserver/db.json and you can manually add any data that matchs the JSON format.
 
 The server PORT is 3020. You can easily change the PORT number and the file is located at src/APIserver/json-server.json. 
 
