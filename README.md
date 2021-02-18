@@ -1,4 +1,4 @@
-# Cathay-THP(Take Home Project)
+# Cathay-THP (Take Home Project)
 
 A simple frontend order webapp build with React.js, Hooks, Redux Toolkit, CSS, JS.
 
