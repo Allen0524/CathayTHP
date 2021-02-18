@@ -47,17 +47,21 @@ function Content() {
         {/* 進行中 */}
         <h3 onClick={() => handleShow(progressShow, "ing")}>進行中</h3>
         {progressShow ? (
-          <OrderList data={proList} state={true} />
-        ) : proList.length === 0 ? (
-          <h4>目前無訂單呦～</h4>
+          proList.length === 0 ? (
+            <h4>目前無訂單呦～</h4>
+          ) : (
+            <OrderList data={proList} state={true} />
+          )
         ) : null}
 
         {/* 已完成 */}
         <h3 onClick={() => handleShow(completedShow, "com")}>已完成</h3>
         {completedShow ? (
-          <OrderList data={comList} state={false} />
-        ) : comList.length === 0 ? (
-          <h4>目前無訂單呦～</h4>
+          comList.length === 0 ? (
+            <h4>目前無訂單呦～</h4>
+          ) : (
+            <OrderList data={comList} state={false} />
+          )
         ) : null}
       </div>
     </div>
