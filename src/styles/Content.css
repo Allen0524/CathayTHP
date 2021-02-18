@@ -1,0 +1,35 @@
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.content__lists {
+  width: 400px;
+  background-color: whitesmoke;
+}
+
+.content__lists h3 {
+  border-bottom: 1px solid #e6e6e6;
+  height: 26px;
+  padding: 8px 0 8px 30px;
+  margin: 0;
+  cursor: pointer;
+  position: relative;
+}
+
+.content__lists h3:hover {
+  background-color: #e6e6e6;
+  transition: 0.2s;
+}
+
+.content__lists h3::before {
+  position: absolute;
+  top: 10px;
+  left: 15px;
+  content: "";
+  width: 6px;
+  height: 24px;
+  background-color: #009f49;
+}
