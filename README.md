@@ -26,9 +26,14 @@ $ cd src/APIserver && json-server db.json
 
 ### `The other`
 ```
-$ cd thp
+$ cd CathayTHP
 $ yarn start
 ```
+
+## Features
+
+1. Use RTK(Redux-Toolkit) to avoid complex redux boilerplate.
+2. Responsive Web Design(RWD)：support Phone, Tablet and Desktop version.
 
 
 
