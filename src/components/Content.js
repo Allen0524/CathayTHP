@@ -21,16 +21,20 @@ function Content() {
 
   // get data
   useEffect(() => {
-    axios
-      .get("http://localhost:3020/orders")
-      .then((res) => {
-        // console.log(res.data);
-        dispatch(initList(res.data));
-      })
-      .catch((err) => {
-        alert(err);
-      });
-  }, []);
+    const fetchData = async () => {
+      const data = await axios
+        .get("http://localhost:3020/orders")
+        .then((res) => {
+          // console.log(res.data);
+          return res.data;
+        })
+        .catch((err) => {
+          alert(err);
+        });
+      dispatch(initList(data));
+    };
+    fetchData();
+  }, [dispatch]);
 
   return (
     <div className="content">

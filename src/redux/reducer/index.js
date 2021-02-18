@@ -14,7 +14,7 @@ const listSlice = createSlice({
     initList: (state, action) => {
       state.proList = [];
       state.comList = [];
-      action.payload.map((item) => {
+      action.payload.forEach((item) => {
         if (item.status.code === 1 || item.status.code === 2) {
           state.proList.push(item);
         } else {
