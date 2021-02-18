@@ -10,7 +10,7 @@ The mock data is located at src/APIserver/db.json and you can manually add any d
 
 The server PORT is 3020. You can easily change the PORT number and the file is located at src/APIserver/json-server.json. 
 
-You must use two terminal:
+You must use two terminals:
 
 ### `One`
 
