@@ -12,11 +12,17 @@ The server PORT is 3020. You can easily change the PORT number and the file is l
 
 You must use two terminal:
 
+### One :
+
 ```
 $ git clone https://github.com/Allen0524/CathayTHP.git
 $ npm install
 $ cd src/APIserver && json-server db.json 
-$ (open another terminal) file location: /thp
+```
+
+### The other :
+```
+$ cd thp
 $ yarn start
 ```
 
