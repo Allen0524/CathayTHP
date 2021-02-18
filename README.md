@@ -26,7 +26,7 @@ $ cd src/APIserver && json-server db.json
 
 ### `The other`
 ```
-$ cd thp
+$ cd CathayTHP
 $ yarn start
 ```
 
