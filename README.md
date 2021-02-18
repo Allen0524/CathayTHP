@@ -30,6 +30,11 @@ $ cd thp
 $ yarn start
 ```
 
+## Features
+
+1. Use RTK(Redux-Toolkit) to avoid complex redux boilerplate.
+2. Responsive Web Design(RWD)：support Phone, Tablet and Desktop version.
+
 
 
 
